@@ -11,21 +11,21 @@
         }
 
         .carousel-item img {
-            width: 100%; /* Ajusta a largura ao contêiner */
-            height: auto; /* Mantém a proporção da imagem */
+            width: 100%; 
+            height: auto; 
         }
 
         .apresentacao {
             display: flex;
-            align-items: center; /* Centraliza verticalmente os itens */
+            align-items: center;
             gap: 20px; /* Espaço entre os itens */
-            margin-top: 40px; /* Distância do carousel */
+            margin-top: 40px;
             background-color: black;
             color: #fff;
         }
 
         section img {
-            width: 50%; /* Ocupa 50% da largura */
+            width: 50%; 
         }
 
         .apresentacaoText {
@@ -47,6 +47,33 @@
 
         .col-4 {
             margin-top: 10px;
+        }
+
+        /* Responsividade de tela */
+        @media screen and (max-width: 430px){
+
+            /* Sobre a loja */
+            section {height: 360px;}
+            .apresentacao {display: block;}
+            .apresentacao img {margin: 0px 75px;}
+            .apresentacaoText h2 {margin-left: 45px;}
+            .apresentacaoText p {
+                font-size: 15px;
+                margin-left: 30px;
+                }
+
+            /* Produtos */
+            .row {display: block;}
+            .col-4 {width: 100%;}
+        }
+
+        @media screen and (max-width: 1368px) {
+
+            /* Sobre a loja */
+            section {height: 360px;}
+
+            /* Produtos */
+            .col-4 {width: 50%;}
         }
 
     </style>
