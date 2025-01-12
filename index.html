@@ -6,6 +6,15 @@
     <title>Carousel Corrigido</title>
     <link rel="stylesheet" href="./bootstrap.min.css">
     <style>
+
+    .navbar-nav .nav-link.active {
+        color: #fff;
+    }
+
+    .nav-link {
+        text-align: center;
+    }
+
         header img {
             width: 130px;
         }
@@ -51,30 +60,30 @@
 
         @media screen and (max-width: 912px) {
 
-        /* Sobre a loja */
-        section {height: 360px;}
+/* Sobre a loja */
+section {height: 360px;}
 
-        /* Produtos */
-        .col-4 {width: 50%;}
+/* Produtos */
+.col-4 {width: 50%;}
+}
+
+/* Responsividade de tela */
+@media screen and (max-width: 430px){
+
+    /* Sobre a loja */
+    section {height: 360px;}
+    .apresentacao {display: block;}
+    .apresentacao img {margin: 0px 75px;}
+    .apresentacaoText h2 {margin-left: 100px;}
+    .apresentacaoText p {
+        font-size: 15px;
+        margin-left: 30px;
         }
 
-        /* Responsividade de tela */
-        @media screen and (max-width: 430px){
-
-            /* Sobre a loja */
-            section {height: 360px;}
-            .apresentacao {display: block;}
-            .apresentacao img {margin: 0px 80px;}
-            .apresentacaoText h2 {margin-left: 60px;}
-            .apresentacaoText p {
-                font-size: 15px;
-                margin-left: 40px;
-                }
-
-            /* Produtos */
-            .row {display: block;}
-            .col-4 {width: 100%;}
-        }
+    /* Produtos */
+    .row {display: block;}
+    .col-4 {width: 100%;}
+}
 
     </style>
 </head>
@@ -83,7 +92,10 @@
         <div class="navbar navbar-expand-lg">
             <div class="container">
                 <img src="./img/moreiraCar.png" alt="">
-                <nav class="collapse navbar-collapse justify-content-end">
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse" id="menu">
                     <ul class="nav navbar-nav nav-pills">
                         <li class="nav-item">
                             <a class="nav-link" href="#apresentacao">Sobre a loja</a>
@@ -92,7 +104,7 @@
                             <a class="nav-link" href="#produtos">Produtos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contato</a>
+                            <a class="nav-link" href="#contato">Contato</a>
                         </li>
                     </ul>
                 </nav>
@@ -219,7 +231,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row" id="contato">
                 <div class="col">
                     <h2>Fale Conosco</h2>
                     <form class="text-bg p-4 mb-4">
